@@ -1,0 +1,57 @@
+@import "styles/utils";
+
+.container {
+  //padding: 48px 0;
+}
+
+.numberGroupContainer {
+  counter-reset: section;
+
+  .sectionNumber {
+    position: relative;
+    counter-increment: section;
+    margin-top: 178px;
+
+    @include media(">mobile") {
+      margin-top: 198px;
+    }
+
+    @include media(">desktop") {
+      margin-top: 228px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -109px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 84px;
+      content: '';
+      opacity: 0.25;
+      background: #87879D;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: counter(section, decimal-leading-zero);
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 26px;
+      color: #87879D;
+
+      background: #FAFAFA;
+      border: 1px solid rgba(135, 135, 157, 0.25);
+      box-sizing: border-box;
+      border-radius: 29px;
+      padding: 15px 19px;
+      margin-bottom: 64px;
+      z-index: 1;
+    }
+
+  }
+}

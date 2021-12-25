@@ -1,0 +1,13 @@
+@import "styles/utils";
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 54px;
+
+  @include media(">mobile") {
+    padding-bottom: 64px;
+  }
+}

@@ -1,0 +1,75 @@
+@import "styles/utils";
+
+.introSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 89px 24px 0;
+
+  @include media(">mobile") {
+    padding: 89px 40px 0;
+  }
+
+  .featureImageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px 25px;
+    margin-bottom: 64px;
+    max-width: 1110px;
+
+    @include media(">mobile") {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 11px;
+      margin-bottom: 48px;
+    }
+
+    @include media(">desktop") {
+      grid-gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .featureImage {
+      width: 100%;
+      background: #D8D8D8;
+      border-radius: 8px;
+    }
+  }
+
+  .overline {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4D96A9;
+    margin-bottom: 24px;
+
+    @include media(">mobile") {
+      margin-bottom: 16px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    color: #28283D;
+    margin-bottom: 32px;
+
+    @include media(">mobile") {
+      max-width: 445px;
+    }
+  }
+
+  .description {
+    max-width: 327px;
+    text-align: center;
+    color: #87879D;
+
+    @include media(">mobile") {
+      max-width: 573px;
+    }
+
+    @include media(">desktop") {
+      max-width: 520px;
+    }
+  }
+}
